@@ -1,0 +1,134 @@
+{
+  "deshret-inscription": {
+    "name": {
+      "zh": "赤冠文",
+      "en": "Deshret Script",
+      "ja": "デシェレト文字"
+    },
+    "description": {
+      "zh": "适用于须弥沙漠地区",
+      "en": "For Sumeru Desert regions",
+      "ja": "スメール砂漠地域に適用"
+    }
+  },
+  "font-ainee": {
+    "name": {
+      "zh": "枫丹文",
+      "en": "Fontaine Script",
+      "ja": "フォンテーヌ文字"
+    },
+    "description": {
+      "zh": "适用于枫丹地区",
+      "en": "For Fontaine region",
+      "ja": "フォンテーヌ地域に適用"
+    }
+  },
+  "inazuma-brush": {
+    "name": {
+      "zh": "稻妻文",
+      "en": "Inazuma Script",
+      "ja": "稲妻文字"
+    },
+    "description": {
+      "zh": "适用于稻妻地区",
+      "en": "For Inazuma region",
+      "ja": "稲妻地域に適用"
+    }
+  },
+  "khaenriah-sun": {
+    "name": {
+      "zh": "坎瑞亚文",
+      "en": "Khaenri'ah Script",
+      "ja": "カーンルイア文字"
+    },
+    "description": {
+      "zh": "覆灭古国坎瑞亚的文字",
+      "en": "Script of the fallen ancient kingdom of Khaenri'ah",
+      "ja": "滅亡した古代王国カーンルイアの文字"
+    }
+  },
+  "khaenriah-clasm": {
+    "name": {
+      "zh": "坎瑞亚深渊变体",
+      "en": "Khaenri'ah Abyss Variant",
+      "ja": "カーンルイア深淵バリアント"
+    },
+    "description": {
+      "zh": "坎瑞亚文的深渊风格变体版本",
+      "en": "Abyss-styled variant of Khaenri'ah script",
+      "ja": "カーンルイア文字の深淵スタイルバリアント"
+    }
+  },
+  "sumeru-scribe": {
+    "name": {
+      "zh": "须弥文",
+      "en": "Sumeru Script",
+      "ja": "スメール文字"
+    },
+    "description": {
+      "zh": "适用于须弥雨林地区",
+      "en": "For Sumeru Jungle regions",
+      "ja": "スメール雨林地域に適用"
+    }
+  },
+  "teyvat-black": {
+    "name": {
+      "zh": "提瓦特文",
+      "en": "Teyvat Script",
+      "ja": "テイワット文字"
+    },
+    "description": {
+      "zh": "蒙德地区及游戏界面专用字体",
+      "en": "Dedicated font for Mondstadt region and game UI",
+      "ja": "モンド地域およびゲームUI専用フォント"
+    }
+  },
+  "star-rail-neue": {
+    "name": {
+      "zh": "星穹铁道文",
+      "en": "Star Rail Script",
+      "ja": "星穹鉄道文字"
+    },
+    "description": {
+      "zh": "适用于黑塔空间站、贝洛伯格地区及游戏界面",
+      "en": "For Herta Space Station, Belobog region, and game interfaces",
+      "ja": "ヘルタ空間站、ベロブローグ地域、ゲームインターフェースに適用"
+    }
+  },
+  "xianzhou-seal": {
+    "name": {
+      "zh": "仙舟文",
+      "en": "Xianzhou Script",
+      "ja": "仙舟文字"
+    },
+    "description": {
+      "zh": "仙舟「罗浮」专用文字",
+      "en": "For The Xianzhou Luofu",
+      "ja": "仙舟「羅浮」専用文字"
+    }
+  },
+  "zzz-a": {
+    "name": {
+      "zh": "绝区零文字变体A",
+      "en": "ZZZ Script Variant A",
+      "ja": "ゼンレスゾーンゼロ文字 バリアントA"
+    },
+    "description": {
+      "zh": "",
+      "en": "",
+      "ja": ""
+    }
+  },
+  "zzz-system": {
+    "name": {
+      "zh": "绝区零文字(系统)",
+      "en": "ZZZ System",
+      "ja": "ゼンレスゾーンゼロシステム文字"
+    },
+    "description": {
+      "zh": "",
+      "en": "",
+      "ja": ""
+    }
+  }
+}
