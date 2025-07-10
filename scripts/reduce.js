@@ -1,6 +1,8 @@
 import path from 'node:path'
-const dirname = import.meta.dirname as string
-const filename = import.meta.filename as string
+const dirname = import.meta.dirname
+const filename = import.meta.filename
+
+import Info from './info.json' with { type: 'json' }
 
 import getTree from './get-tree.ts'
 
@@ -8,12 +10,8 @@ Deno.mkdirSync(path.resolve(dirname, '../dist/fonts'), { recursive: true })
 
 const Tree = getTree()
 
-const Info = JSON.parse(
-  Deno.readTextFileSync(path.resolve(dirname, './info.json'))
-)
-
 for (const font of Tree) {
-  if (Info?.[font.id]) {
+  if (Info[font.id]) {
     font.name = Info[font.id].name
     font.description = Info[font.id].description
   } else {
@@ -45,7 +43,7 @@ for (const font of Tree) {
 .${font.cssClass}{
   font-family: '${font.id}';
 }
-        `
+`
     }
   }
 }

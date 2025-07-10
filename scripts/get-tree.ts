@@ -12,14 +12,24 @@ const Games = {
   'Zenless-Zone-Zero': 'ZZZ'
 }
 
-const result: any = []
+interface Data {
+  id: string
+  game: string
+  supportedCharacters: string
+  supportedFormat: string[]
+  supportedVariant: string[]
+  cssClass: string
+  files: any[]
+}
+
+const result: Data[] = []
 
 function checkFontSupportedCharacter(font: any): string {
   const Font = fontkit.openSync(font)
   const set = Font.characterSet
   let supportedCharacterString = ''
   for (const character of set) {
-    if( character > 0x7f){
+    if (character > 0x7f) {
       continue
     }
     supportedCharacterString += String.fromCharCode(character)
@@ -33,20 +43,20 @@ export default function () {
     const GameDir = Deno.readDirSync(GamePath)
     for (const FontFolder of GameDir) {
       // 字体文件夹
-      const data: any = {
+      const data: Data = {
         id: FontFolder.name.toLocaleLowerCase(),
         game: Games[game as keyof typeof Games],
-        supportedCharacters: undefined,
-        supportedFormat: new Set(),
-        supportedVariant: new Set(),
-        cssClass: 'font-'+FontFolder.name.toLocaleLowerCase(),
-        files: [],
+        supportedCharacters: '',
+        supportedFormat: [] as string[],
+        supportedVariant: [] as string[],
+        cssClass: 'font-' + FontFolder.name.toLocaleLowerCase(),
+        files: [] as any[]
       }
       const FormatPath = path.resolve(GamePath, FontFolder.name)
       const FormatDir = Deno.readDirSync(FormatPath)
       for (const FormatFolder of FormatDir) {
         if (['ttf', 'otf', 'woff2'].includes(FormatFolder.name)) {
-          data.supportedFormat.add(FormatFolder.name)
+          data.supportedFormat.push(FormatFolder.name)
           const Fonts = Deno.readDirSync(
             path.resolve(FormatPath, FormatFolder.name)
           )
@@ -54,7 +64,9 @@ export default function () {
             if (Font.isFile) {
               const reg = /^(.*?)-([^-.]+)\.[^.]+$/
               const variant = Font.name.match(reg)?.[2] as string
-              data.supportedVariant.add(variant)
+              if (!new Set(data.supportedVariant).has(variant)) {
+                data.supportedVariant.push(variant)
+              }
               Deno.copyFileSync(
                 path.resolve(FormatPath, FormatFolder.name, Font.name),
                 path.resolve(dirname, '../dist/fonts', Font.name)
@@ -76,8 +88,6 @@ export default function () {
           }
         }
       }
-      data.supportedFormat = Array.from(data.supportedFormat)
-      data.supportedVariant = Array.from(data.supportedVariant)
       result.push(data)
     }
   }

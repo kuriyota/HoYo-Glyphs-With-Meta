@@ -1,0 +1,17 @@
+{
+  "name": "HoYo-Glyphs-With-Meta",
+  "version": "2025.7.0 - 0",
+  "files": [
+    "dist",
+    "types.ts"
+  ],
+  "exports":{
+    "default": "./dist/meta.json",
+    "css":"./dist/hoyo-glyphs.css",
+    "types":"./types.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
